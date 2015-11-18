@@ -58,3 +58,6 @@ target/
 
 # Data Directory
 Data/
+
+# Notebooks checkpoints 
+.ipynb_checkpoints/
