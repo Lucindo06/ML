@@ -1,0 +1,130 @@
+\documentclass[a4paper, 10pt, twocolomn]{article} %ou report.... ça change surtout la numérotation des sections !
+\usepackage{import}
+\usepackage{preambule}
+\usepackage{coding}
+
+%\usepackage{makeidx}
+%\makeindex
+
+\title{Challenge\\
+	Otto}
+\author{Chaabane Imad, Daoudi Nassim, Estrade Victor\\
+   M2 AIC Paris-Saclay\\
+   \texttt{imad-eddine.chaabane@u-psud.fr}\\
+   \texttt{nassim.daoudi@u-psud.fr}\\
+   \texttt{victor.estrade@u-psud.fr}\\
+        }
+\date{\today}
+ 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+
+\section*{Introduction} % (fold)
+\label{sec:introduction}
+
+\todo Introduire ... huummm ! 
+
+% section introduction (end)
+
+\section{Les données} % (fold)
+\label{sec:les_donn_es}
+
+\subsection{Distribution} % (fold)
+\label{sub:distribution}
+
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.6]{Files/Class_distrib/Class_distribution_of_feature_53.png}
+ \includegraphics[scale=0.6]{Files/Class_distrib/Class_distribution_of_feature_13.png}
+ \caption[Distribution des attributs]{Distribution des attributs}
+ \label{fig: distrib}
+\end{figure}
+
+Tous les attributs ont globalement la même distributions, beaucoup de 0 et 
+en dehors des zéros une distribution ressemblant aux figures de 
+\ref{fig: distrib} (L'intégralité des distributions sont disponnibles dans l'archive).
+
+% subsection distribution (end)
+
+\subsection{Correlations} % (fold)
+\label{sub:correlations}
+
+\todo On cherche s'il y a des correlations fortes entre les différents
+attributs
+
+\begin{figure}
+ \centering
+ \includegraphics[scale=0.6]{Files/covar.png}
+ \caption[Possible dependencies]{Possible dependencies}
+ \label{fig: covar}
+\end{figure}
+
+\todo correlation vs dependency
+
+\url{http://www.stat.cmu.edu/~cshalizi/uADA/13/reminders/uncorrelated-vs-independent.pdf}
+
+% subsection correlations (end)
+\clearpage
+
+\subsection{L'évaluation} % (fold)
+\label{sub:l_valuation}
+
+L'une des particularités du challenge Otto est la métrique d'évaluation,
+"multi-class logarithmic loss", qui récompense les réponses "approximative"
+donnant l'avantage à un modèle exprimant peu de confiance dans les instances 
+qu'il a du mal à classifier. 
+
+Là où l'erreur ne tient pas compte de la confiance du modèle.
+
+
+% subsection l_valuation (end)
+% section les_donn_es (end)
+
+\section{Dry runs} % (fold)
+\label{sec:dry_runs}
+
+Afin d'avoir une idée de la difficulté du problème nous avons commencé par
+lancer quelques modèles simples sur les données.
+
+\todo Des arbres de décision car ils sont rapides et simples à entraîner et ils
+sélectionnent bien les attributs.
+
+
+\todo Le problème consistant à optimiser des probabilités nous nous sommes
+naturellement tourné vers Naive Bayes. 
+
+
+
+% section dry_runs (end)
+
+\section{Nos modèles} % (fold)
+\label{sec:nos_mod_les}
+
+\todo Quels modèles ? Pourquoi eux ?
+
+% section nos_mod_les (end)
+
+\section{Comparaison} % (fold)
+\label{sec:comparaison}
+
+\todo Super plot !
+
+\todo Qui est mieux ? Pourquoi ?
+
+On remarque que nos modèles ont une variance bien plus importante que 
+les modèles de sklearn. Les mesures de performances sont donc très incertaine.
+
+% section comparaison (end)
+
+\section*{Conclusions} % (fold)
+\label{sec:conclusions}
+
+\todo Pourquoi on déchire
+
+% section conclusions (end)
+
+\end{document}
